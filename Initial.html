@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Project Dashboard</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background: #f4f6f8;
+            color: #222;
+        }
+
+        header {
+            background: #1f2937;
+            color: white;
+            padding: 24px;
+            text-align: center;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 30px auto;
+            padding: 0 20px;
+        }
+
+        .cards {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px;
+        }
+
+        .card {
+            background: white;
+            padding: 25px;
+            border-radius: 12px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+            text-align: center;
+        }
+
+        .card h2 {
+            margin: 0 0 10px;
+        }
+
+        .value {
+            font-size: 32px;
+            font-weight: bold;
+        }
+
+        button {
+            margin-top: 30px;
+            padding: 12px 24px;
+            border: none;
+            border-radius: 8px;
+            background: #2563eb;
+            color: white;
+            font-size: 16px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background: #1d4ed8;
+        }
+
+        #message {
+            margin-top: 20px;
+            font-size: 18px;
+            text-align: center;
+        }
+
+        @media (max-width: 700px) {
+            .cards {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Project Dashboard</h1>
+        <p>Overview of current project statistics</p>
+    </header>
+
+    <div class="container">
+        <div class="cards">
+            <div class="card">
+                <h2>Projects</h2>
+                <div class="value">12</div>
+            </div>
+
+            <div class="card">
+                <h2>Completed</h2>
+                <div class="value">8</div>
+            </div>
+
+            <div class="card">
+                <h2>Pending</h2>
+                <div class="value">4</div>
+            </div>
+        </div>
+
+        <div style="text-align: center;">
+            <button onclick="showMessage()">Show Status</button>
+        </div>
+
+        <div id="message"></div>
+    </div>
+
+    <script>
+        function showMessage() {
+            document.getElementById("message").textContent =
+                "All project systems are running normally.";
+        }
+    </script>
+</body>
+</html>
